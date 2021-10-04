@@ -5,13 +5,13 @@ import yfinance as yf
 API_KEY = os.getenv('API_KEY')
 bot = telebot.TeleBot(API_KEY)
 
-@bot.message_handler(commands=['Greet'])
+@bot.message_handler(commands=['Merhaba'])
 def greet(message):
-  bot.reply_to(message, "Hey! Hows it going?")
+  bot.reply_to(message, "Ooo merhabalar efendim")
 
-@bot.message_handler(commands=['hello'])
+@bot.message_handler(commands=['Sa'])
 def hello(message):
-  bot.send_message(message.chat.id, "Hello!")
+  bot.send_message(message.chat.id, "Aleyküm Selam")
 
 @bot.message_handler(commands=['wsb'])
 def get_stocks(message):
